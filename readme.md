@@ -13,7 +13,7 @@ You can either use the `.yaml` file provided in this repository, or create your
 own by running `leetgo init` after entering the nix shell. Speaking of, I make
 use of a flake to manage some basic dependencies for the testing environment.
 Not everything I use is present in this flake, but everything you "need" is
-included. Neovim, for exmaple, is not included in the flake as I didn't want to
+included. Neovim, for example, is not included in the flake as I didn't want to
 override my configuration from outside the shell while inside the shell.
 
 To use the shell, simply type `nix develop`

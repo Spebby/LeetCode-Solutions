@@ -43,6 +43,11 @@ code:
   rust:
     # Base directory to put generated questions, defaults to the language slug, e.g. go, python, cpp.
     out_dir: rust
+    cargo: cargo
+    rustflags: "-C opt-level=3"
+    # Default template for filename, can reuse the global template
+    filename_template:
+      "{{ .Id | padWithZero 4 }}{{ if .SlugIsMeaningful }}.{{ .Slug }}{{ end }}"
   java:
     # Base directory to put generated questions, defaults to the language slug, e.g. go, python, cpp.
     out_dir: java

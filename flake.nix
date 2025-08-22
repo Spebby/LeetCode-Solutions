@@ -17,6 +17,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             leetgo
+            git
 
             # CXX
             clang
@@ -27,12 +28,28 @@
             # Python
             python3
             python3Packages.pip
+
+            # Rust
+            rustc
+            cargo
+
+            # nice CLI
+            bat
+            eza
+            fd
+            fzf
+            jq
+            less
+            ripgrep
+            tokei
+            tree
+            yazi
           ];
 
           shellHook = ''
-            echo "LeetCode development environment loaded."
-            echo "- Run 'leetgo new <slug>' to fetch a new problem."
-            echo "- Write solutions in C or Python."
+            		echo "LeetCode development environment loaded."
+            		echo "- Write solutions in C, Python or Rust."
+            		echo "- Use 'leetgo pick <id> -l <lang> to pick a problem for a specific language."
           '';
         };
       }
